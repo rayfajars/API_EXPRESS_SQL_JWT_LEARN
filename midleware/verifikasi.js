@@ -16,6 +16,7 @@ function verifikasi(){
         // console.log(tokenWithBearer)
         if(tokenWithBearer){
             var token = tokenWithBearer.split(' ')[1];
+            // console.log(token)
             // verifikasi
             jwt.verify(token, config.secret, function(err, decoded){
                 if(err){

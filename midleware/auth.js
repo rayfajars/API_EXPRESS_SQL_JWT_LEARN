@@ -68,8 +68,8 @@ exports.login = function (req, res) {
                 var token = jwt.sign({
                     rows
                 }, config.secret, {
-                    expiresIn: "24h",
-                    // waktu token selama 1 hari, jika token sudah lewat 1 hari maka token tidak bisa diakses dan harus login kembali untuk mengenrate token aru
+                    expiresIn: "2d",
+                    // waktu token selama 1 hari, jika token sudah lewat 3 hari maka token tidak bisa diakses dan harus login kembali untuk mengenrate token aru
                 });
                 // mengambil data id di database user
                 id_user = rows[0].id;
@@ -78,7 +78,7 @@ exports.login = function (req, res) {
                 //2 tambahan row role
                 role = rows[0].role;
 
-                var expired = "24h"
+                var expired = "2d"
 
                 var data = {
                     id_user: id_user,
