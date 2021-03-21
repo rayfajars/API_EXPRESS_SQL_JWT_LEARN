@@ -69,7 +69,7 @@ exports.login = function (req, res) {
                     rows
                 }, config.secret, {
                     expiresIn: "2d",
-                    // waktu token selama 1 hari, jika token sudah lewat 3 hari maka token tidak bisa diakses dan harus login kembali untuk mengenrate token aru
+                    // waktu token selama 1 hari, jika token sudah lewat 2 hari maka token tidak bisa diakses dan harus login kembali untuk mengenrate token aru
                 });
                 // mengambil data id di database user
                 id_user = rows[0].id;
