@@ -10,7 +10,7 @@ function verifikasi(){
     return function(req,res, next){
         // mengambil role body secara manual harus mah bisa otomatis dari database
         var role = req.body.role
-        console.log(role)
+        // console.log(role)
         // check authorizzation header / check token
         var tokenWithBearer =  req.headers.authorization;
         // console.log(tokenWithBearer)
@@ -24,6 +24,7 @@ function verifikasi(){
                 }else{
                     if(role == 1){
                         req.auth = decoded;
+                        // console.log(req.auth)
                         next()
                     }else {
                         return res.status(401).send({auth:false,message:"Gagal mengotorisasi role anda!"});
