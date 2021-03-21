@@ -1,0 +1,33 @@
+{
+  "name": "template_api",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "ray fakar",
+  "license": "ISC",
+  "description": "template api",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rayfajars/template_api.git"
+  },
+  "keywords": [
+    "rest",
+    "api",
+    "nodejs"
+  ],
+  "bugs": {
+    "url": "https://github.com/rayfajars/template_api/issues"
+  },
+  "homepage": "https://github.com/rayfajars/template_api#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "ip": "^1.1.5",
+    "jsonwebtoken": "^8.5.1",
+    "md5": "^2.3.0",
+    "morgan": "^1.10.0",
+    "mysql": "^2.18.1"
+  }
+}
